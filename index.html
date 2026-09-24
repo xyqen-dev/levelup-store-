@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LevelUp Store — Accounts, Subscriptions & Custom Bots</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-orbs" aria-hidden="true">
+  <span class="orb orb-a"></span>
+  <span class="orb orb-b"></span>
+  <span class="orb orb-c"></span>
+</div>
+
+<header>
+  <nav class="wrap">
+    <div class="logo"><span class="dot"></span>LevelUp Store</div>
+    <div class="nav-links">
+      <a href="#catalog">Catalog</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">Support</a>
+    </div>
+    <a href="#catalog" class="nav-cta">Browse accounts</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow mono">Live catalog · restocked regularly</span>
+      <h1>Your next game,<br>already leveled up.</h1>
+      <p class="hero-sub">Game accounts, streaming subscriptions, and custom Discord bots — delivered fast, priced fair.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn-primary">Browse accounts</a>
+        <span class="hero-note"><strong>400+</strong> orders delivered</span>
+      </div>
+
+      <div class="ribbon-stage">
+        <div class="ribbon-track" id="ribbon-track"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Everything in one place</h2>
+        <p>Slide through games, subscriptions, and bots — tap Capes or the Far Cry bundle to see every option.</p>
+      </div>
+
+      <div class="tabs" role="tablist">
+        <button class="tab-btn active" data-tab="games" role="tab" aria-selected="true">Games</button>
+        <button class="tab-btn" data-tab="subs" role="tab" aria-selected="false">Subscriptions</button>
+        <button class="tab-btn" data-tab="bots" role="tab" aria-selected="false">Discord Bots</button>
+        <span class="tab-indicator" id="tab-indicator"></span>
+      </div>
+
+      <div class="tab-panel active" data-panel="games">
+        <div class="carousel">
+          <div class="carousel-track" id="games-track"></div>
+          <div class="carousel-arrows">
+            <button class="arrow-btn" data-scroll="games-track" data-dir="-1" aria-label="Scroll left">←</button>
+            <button class="arrow-btn" data-scroll="games-track" data-dir="1" aria-label="Scroll right">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="subs">
+        <div class="carousel">
+          <div class="carousel-track" id="subs-track"></div>
+          <div class="carousel-arrows">
+            <button class="arrow-btn" data-scroll="subs-track" data-dir="-1" aria-label="Scroll left">←</button>
+            <button class="arrow-btn" data-scroll="subs-track" data-dir="1" aria-label="Scroll right">→</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" data-panel="bots">
+        <div class="bots-empty">
+          No custom bots built yet — once someone places an order, it'll show up right here as an example.
+        </div>
+        <div class="contact-box">
+          <h3>Want a custom Discord bot?</h3>
+          <p>From a simple moderation bot to a full custom master bot built around your server — message us on Discord and we'll scope it out with you.</p>
+          <a href="https://discord.gg/uCkuMmgSj2" class="btn-primary" id="discord-cta">Message us on Discord</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>How it works</h2>
+        <p>Three steps, usually done before your coffee's cold.</p>
+      </div>
+      <div class="steps reveal-stagger">
+        <div class="step stagger-item">
+          <span class="n">01</span>
+          <h3>Pick what you need</h3>
+          <p>Game accounts, a subscription, or a custom bot — filter and pick.</p>
+        </div>
+        <div class="step stagger-item">
+          <span class="n">02</span>
+          <h3>Pay securely</h3>
+          <p>Checkout with your preferred method. Every order is protected.</p>
+        </div>
+        <div class="step stagger-item">
+          <span class="n">03</span>
+          <h3>Get instant access</h3>
+          <p>Details land in your inbox or Discord DM — usually under 5 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="stats-bar reveal">
+        <div class="stat">
+          <div class="num"><span data-count-to="400">0</span>+</div>
+          <div class="lbl">Orders delivered</div>
+        </div>
+        <div class="stat">
+          <div class="num"><span data-count-to="4.9" data-decimals="1">0</span> / 5</div>
+          <div class="lbl">Average buyer rating</div>
+        </div>
+        <div class="stat">
+          <div class="num">5 min – 24 hrs</div>
+          <div class="lbl">Delivery time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="faq">
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <div class="logo"><span class="dot"></span>LevelUp Store</div>
+        <p class="foot-tagline">A small storefront for game accounts, subscriptions, and custom Discord bots — built and run from a phone.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Catalog</h4>
+          <a href="#catalog">Games</a>
+          <a href="#catalog">Subscriptions</a>
+          <a href="#catalog">Discord Bots</a>
+        </div>
+        <div class="foot-col">
+          <h4>Support</h4>
+          <a href="#">Join Discord</a>
+          <a href="#">Order status</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 LevelUp Store. Test build — not a live store yet.</span>
+      <span class="mono">v0.3</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Detail overlay for Minecraft Capes / Far Cry series -->
+<div class="detail-overlay" id="detail-overlay">
+  <div class="detail-inner">
+    <button class="back-btn" id="detail-back">← Back to catalog</button>
+    <h2 id="detail-title"></h2>
+    <p class="detail-sub" id="detail-sub"></p>
+    <div class="detail-grid" id="detail-grid"></div>
+  </div>
+</div>
+
+<!-- Leave-site confirmation modal -->
+<div class="leave-modal" id="leave-modal">
+  <div class="leave-modal-card">
+    <h3>Leaving LevelUp Store</h3>
+    <p>You're about to head to Discord to reach us there.</p>
+    <span class="leave-modal-link mono" id="leave-modal-link"></span>
+    <div class="leave-modal-actions">
+      <button class="leave-cancel" id="leave-cancel">Stay here</button>
+      <button class="leave-confirm" id="leave-confirm">Continue to Discord</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
